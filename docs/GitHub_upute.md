@@ -1,26 +1,30 @@
 # GitHub upute – GreenSpot
 
-## Prije pushanja
+## Trenutno stanje i završni koraci
 
-- [ ] Prijaviti se na vlastiti GitHub račun.
-- [ ] Kreirati javni prazan repozitorij `greenspot-skolska-inicijativa`.
-- [ ] Dodati `geniuslab.ba@gmail.com` kao collaboratora.
-- [ ] Provjeriti poziv za collaboratora.
-- [ ] Postaviti vlastiti Git identitet ako je potrebno.
-- [ ] Kopirati HTTPS URL repozitorija.
+GitHub račun je povezan i potvrđeni korisnički naziv je `Yooo124`. Lokalni repozitorij već ima postavljen `origin`:
+
+`https://github.com/Yooo124/greenspot-skolska-inicijativa.git`
+
+U ovoj fazi repozitorij još nije kreiran na GitHubu i poziv nastavniku nije poslan. Kreiraj prazan javni repozitorij navedenog naziva, pa nastavi naredbama ispod.
+
+- [ ] Kreirati javni prazan repozitorij `greenspot-skolska-inicijativa` na računu `Yooo124`.
+- [ ] Dodati `geniuslab.ba@gmail.com` kao collaboratora u **Settings → Collaborators**.
+- [ ] Provjeriti da je poziv poslan (nastavnik ga treba prihvatiti).
+- [ ] Provjeriti `git remote -v` da `origin` pokazuje na navedeni URL.
 
 ## Komande
 
 ```bash
-git remote add origin https://github.com/TVOJ-GITHUB-NALOG/greenspot-skolska-inicijativa.git
+git remote -v
+git push -u origin main
 git push -u origin feature/greenspot-solo
-git push origin main
 git branch -a
 git log --oneline --decorate --all -12
 git status
 ```
 
-Ako `origin` već postoji, prvo pokrenuti `git remote -v`; ne dodavati drugi put isti remote.
+`origin` je već postavljen u dostavljenoj lokalnoj Git historiji. Nemoj ponovo dodavati isti remote.
 
 ## Pravila zadatka
 

@@ -66,12 +66,18 @@ Ovo postavlja identitet za buduće commitove. Već postojeći commitovi zadržav
 
 ### 4.2 Kreiraj GitHub repozitorij
 
-1. Prijavi se na GitHub.
+GitHub račun je povezan s ovim projektom, a lokalni `origin` je unaprijed postavljen na:
+
+`https://github.com/Yooo124/greenspot-skolska-inicijativa.git`
+
+Na GitHubu još trebaš napraviti repozitorij:
+
+1. Prijavi se na GitHub kao `Yooo124`.
 2. Izaberi **New repository**.
 3. Naziv: `greenspot-skolska-inicijativa`.
 4. Postavi repozitorij na **Public**.
 5. Nemoj označiti opcije za automatsko dodavanje README, `.gitignore` ili licence jer su datoteke već u lokalnom projektu.
-6. Kreiraj repozitorij i kopiraj HTTPS adresu koju GitHub prikaže.
+6. Kreiraj repozitorij. Ne trebaš ručno dodavati datoteke kroz web-stranicu.
 
 ### 4.3 Dodaj nastavnika kao collaboratora
 
@@ -83,17 +89,20 @@ Pošalji poziv i provjeri da je poziv poslan. Nastavnik možda mora prihvatiti p
 
 ### 4.4 Poveži lokalni projekat s GitHubom i pushaj branch
 
-U terminalu unutar foldera projekta zamijeni URL svojim URL-om repozitorija. Ako nastavnik traži branch s tvojim imenom, prvo ga preimenuj (dok si na razvojnom branchu): `git branch -m feature/ime-prezime`. U naredbama koristi ime brancha koje zaista postoji.
+U terminalu unutar foldera projekta provjeri unaprijed postavljenu adresu:
 
 ```bash
-git remote add origin https://github.com/TVOJ-GITHUB-NALOG/greenspot-skolska-inicijativa.git
+git remote -v
+```
+
+Trebao bi vidjeti `origin` koji pokazuje na `https://github.com/Yooo124/greenspot-skolska-inicijativa.git`. Nakon što kreiraš prazan javni repozitorij istog naziva, objavi grane:
+
+```bash
 git push -u origin main
 git push -u origin feature/greenspot-solo
 ```
 
-`main` se push-a prvi da GitHub postavi `main` kao početni branch. Razvojni branch se push-a odvojeno i ne spaja se u `main`.
-
-Ako `origin` već postoji, nemoj ponovo dodavati remote; provjeri ga naredbom `git remote -v`.
+`main` se push-a prvi da GitHub postavi `main` kao početni branch. Razvojni branch se push-a odvojeno i ne spaja se u `main`. Ako GitHub odbije push, provjeri da je repozitorij prazan i da si prijavljen na račun `Yooo124`.
 
 Prvi push objavljuje razvojni branch. Drugi push objavljuje početni `main` branch. Nemoj raditi merge i nemoj slati razvojne promjene direktno na `main`.
 
