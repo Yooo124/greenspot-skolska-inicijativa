@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GreenSpot znak">
+  <rect width="64" height="64" rx="19" fill="#163b2d"/>
+  <path d="M14 42c0-15 11-27 29-29-1 17-10 30-25 31" fill="#d9ebaa"/>
+  <path d="M17 48c7-12 17-20 31-26" fill="none" stroke="#f5f4ec" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="47" r="7" fill="#8fb85f"/>
+</svg>
