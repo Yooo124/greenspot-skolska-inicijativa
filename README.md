@@ -51,7 +51,7 @@ GreenSpot_Projekt/
 
 ## 4. Git i GitHub – obavezni završni koraci
 
-Lokalna historija je pripremljena s deset smislenih commitova na branchu `feature/greenspot-solo`. Branch `main` je odvojen od razvojnog brancha i na njega nije direktno rađeno. Prije objave provjeriti autora commitova i postaviti Git identitet na vlastito ime i e-mail.
+Lokalna historija je pripremljena s deset smislenih commitova na branchu `feature/greenspot-solo`. Branch `main` je odvojen od razvojnog brancha i na njega nije direktno rađeno. Prije objave provjeriti autora commitova i po potrebi preimenovati branch. Trenutni commitovi imaju neutralnog autora `GreenSpot Project`; lokalna Git konfiguracija za buduće commitove ne mijenja autora već kreiranih commitova.
 
 ### 4.1 Postavi svoj Git identitet
 
@@ -62,7 +62,7 @@ git config user.name "Ime Prezime"
 git config user.email "tvoj-github-email@example.com"
 ```
 
-Ovo postavlja identitet za buduće commitove. Već postojeći commitovi zadržavaju autora s kojim su kreirani. Ako nastavnik izričito traži da svih deset commitova bude pod tvojim GitHub identitetom, treba ih prepisati prije pushanja (kontaktiraj nastavnika ili zatraži pomoć prije mijenjanja historije).
+Ovo postavlja identitet za buduće commitove. Već postojeći commitovi zadržavaju autora `GreenSpot Project`. Ako nastavnik traži da svaki commit bude vezan za tvoj GitHub profil, autorstvo postojećih commitova mora se promijeniti prije pushanja. Nemoj naslijepo mijenjati historiju; javi se za tačne korake nakon što potvrdiš da je to zaista potrebno.
 
 ### 4.2 Kreiraj GitHub repozitorij
 
@@ -83,13 +83,15 @@ Pošalji poziv i provjeri da je poziv poslan. Nastavnik možda mora prihvatiti p
 
 ### 4.4 Poveži lokalni projekat s GitHubom i pushaj branch
 
-U terminalu unutar foldera projekta zamijeni URL svojim URL-om repozitorija:
+U terminalu unutar foldera projekta zamijeni URL svojim URL-om repozitorija. Ako nastavnik traži branch s tvojim imenom, prvo ga preimenuj (dok si na razvojnom branchu): `git branch -m feature/ime-prezime`. U naredbama koristi ime brancha koje zaista postoji.
 
 ```bash
 git remote add origin https://github.com/TVOJ-GITHUB-NALOG/greenspot-skolska-inicijativa.git
+git push -u origin main
 git push -u origin feature/greenspot-solo
-git push origin main
 ```
+
+`main` se push-a prvi da GitHub postavi `main` kao početni branch. Razvojni branch se push-a odvojeno i ne spaja se u `main`.
 
 Ako `origin` već postoji, nemoj ponovo dodavati remote; provjeri ga naredbom `git remote -v`.
 
